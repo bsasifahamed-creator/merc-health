@@ -24,7 +24,7 @@ export function About() {
             <div className="w-12 h-px bg-gold mb-8" />
             <div className="space-y-5 text-text-body font-body leading-relaxed text-[0.93rem]">
               <p>
-                MERC Health is the UAE&apos;s first dedicated healthcare insurance distribution
+                M E R C is the UAE&apos;s first dedicated healthcare insurance distribution
                 and technology infrastructure platform — purpose-built to connect insurers,
                 brokers, healthcare providers, and digital health ecosystems through a single
                 intelligent layer.
@@ -36,7 +36,7 @@ export function About() {
               </p>
               <p>
                 By unifying distribution, administration, analytics, and compliance into one
-                platform, MERC enables our partners to focus on what matters: delivering care.
+                platform, M E R C enables our partners to focus on what matters: delivering care.
               </p>
             </div>
             <div className="mt-6 sm:mt-8 inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-teal/40 text-teal font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.02em]">
@@ -63,7 +63,7 @@ export function About() {
                 </p>
                 <p>
                   Backed by deep UAE market expertise and aligned with all major regulatory
-                  frameworks, MERC Health is the infrastructure that the GCC healthcare
+                  frameworks, M E R C is the infrastructure that the GCC healthcare
                   insurance ecosystem has been waiting for.
                 </p>
               </div>

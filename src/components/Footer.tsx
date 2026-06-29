@@ -1,7 +1,7 @@
 const LINKS = {
   platform: ['Embedded Distribution', 'API Infrastructure', 'Analytics Engine', 'Fraud Detection'],
   partners: ['Insurer Partnerships', 'Broker Onboarding', 'Provider Networks', 'Developer API'],
-  connect: ['hello@merchealth.ae', 'Dubai, UAE', 'LinkedIn'],
+  connect: ['hello@merc.care', 'Dubai, UAE', 'LinkedIn'],
 }
 
 export function Footer() {
@@ -10,8 +10,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           <div>
-            <span className="text-xl sm:text-2xl font-semibold tracking-tight font-heading text-gold block mb-1">MERC</span>
-            <span className="font-mono text-[0.6rem] sm:text-[0.7rem] tracking-[0.12em] text-muted block mb-4 sm:mb-5">Modern Embedded Refined Care</span>
+            <img src="/logo.png" alt="M E R C" className="h-14 sm:h-16 w-auto mb-3 sm:mb-4" />
             <p className="text-sm sm:text-base text-text-body leading-relaxed font-body">
               The operating system for modern healthcare insurance distribution across the UAE and GCC.
             </p>
@@ -47,7 +46,7 @@ export function Footer() {
           <span className="font-mono text-[0.6rem] sm:text-[0.7rem] tracking-[0.1em] text-muted">&#9674; Distribution &amp; Technology Facilitator</span>
         </div>
         <p className="text-[0.6rem] sm:text-xs text-muted/70 mt-4 sm:mt-6 leading-relaxed">
-          Important Regulatory Disclaimer &mdash; MERC Health is a technology and distribution facilitation company. MERC is not an insurer, third-party administrator (TPA), or reinsurer, and does not underwrite, carry, or assume insurance risk of any kind. All insurance products offered, quoted, or distributed through the MERC platform are issued, underwritten, and administered exclusively by licensed UAE partner insurance companies regulated by the relevant authorities including the Dubai Health Authority (DHA), Dubai Health Insurance Corporation (DHIC), Department of Health Abu Dhabi (DoH), Ministry of Health &amp; Prevention (MOHAP), and the Central Bank of the UAE (CBUAE). MERC acts solely as a facilitating intermediary connecting distribution channels to licensed insurance carriers. Policyholders&apos; contractual relationship for insurance coverage is exclusively with the issuing insurance company. All regulatory enquiries should be directed to the relevant licensed insurer. Nothing on this website constitutes insurance.
+          Important Regulatory Disclaimer &mdash; M E R C is a technology and distribution facilitation company. M E R C is not an insurer, third-party administrator (TPA), or reinsurer, and does not underwrite, carry, or assume insurance risk of any kind. All insurance products offered, quoted, or distributed through the M E R C platform are issued, underwritten, and administered exclusively by licensed UAE partner insurance companies regulated by the relevant authorities including the Dubai Health Authority (DHA), Dubai Health Insurance Corporation (DHIC), Department of Health Abu Dhabi (DoH), Ministry of Health &amp; Prevention (MOHAP), and the Central Bank of the UAE (CBUAE). M E R C acts solely as a facilitating intermediary connecting distribution channels to licensed insurance carriers. Policyholders&apos; contractual relationship for insurance coverage is exclusively with the issuing insurance company. All regulatory enquiries should be directed to the relevant licensed insurer. Nothing on this website constitutes insurance.
         </p>
       </div>
     </footer>

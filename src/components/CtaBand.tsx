@@ -8,14 +8,14 @@ export function CtaBand() {
           Ready to Deploy <em className="text-gold">Next-Generation</em> Infrastructure?
         </h2>
         <p className="text-base sm:text-lg text-text-body max-w-2xl mx-auto mb-8 sm:mb-10 font-body leading-relaxed">
-          Join the leading insurers, brokers, and healthcare providers already leveraging MERC Health&apos;s infrastructure across the UAE and GCC.
+          Join the leading insurers, brokers, and healthcare providers already leveraging M E R C&apos;s infrastructure across the UAE and GCC.
         </p>
         <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-          <a href="mailto:hello@merchealth.ae" className="bg-gold text-navy rounded-full px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold inline-flex items-center gap-2 hover:bg-gold-light transition-colors font-body">
+          <a href="mailto:hello@merc.care" className="bg-gold text-navy rounded-full px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold inline-flex items-center gap-2 hover:bg-gold-light transition-colors font-body">
             Get Started
             <ArrowUpRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </a>
-          <a href="mailto:api@merchealth.ae" className="text-sm sm:text-base font-semibold text-platinum underline underline-offset-4 decoration-platinum/30 hover:decoration-platinum transition-colors font-body">
+          <a href="mailto:api@merc.care" className="text-sm sm:text-base font-semibold text-platinum underline underline-offset-4 decoration-platinum/30 hover:decoration-platinum transition-colors font-body">
             Developer Access
           </a>
         </div>

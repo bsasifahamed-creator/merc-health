@@ -26,7 +26,7 @@ export function Regulatory() {
             <SplitText text="Built for UAE Regulatory Compliance" goldWord="UAE" as="span" />
           </h2>
           <p className="text-text-body font-body leading-relaxed text-sm sm:text-[0.93rem] max-w-[540px] mb-8 sm:mb-12">
-            MERC Health is fully aligned with every major healthcare insurance regulatory
+            M E R C is fully aligned with every major healthcare insurance regulatory
             authority across the UAE.
           </p>
         </FadeUpReveal>

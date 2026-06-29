@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 const FAQ_ITEMS = [
-  { q: 'What is MERC Health?', a: 'MERC Health is a healthcare insurance distribution and technology platform purpose-built for the UAE and GCC markets. We are a distribution and technology facilitator — not an insurer, TPA, or reinsurer.' },
-  { q: 'How does MERC Health work?', a: 'Our platform provides six core infrastructure layers: Embedded Distribution, API-Driven Technology, Embedded Healthcare Services, Real-Time Analytics, Fraud Detection, and Renewal Automation.' },
-  { q: 'Who can use MERC Health?', a: 'MERC Health serves insurance companies, brokers, healthcare providers, and digital health platforms operating in the UAE and GCC.' },
-  { q: 'Is MERC Health an insurance company?', a: 'No. All insurance products are underwritten and issued by licensed partner insurance companies regulated by UAE authorities.' },
+  { q: 'What is M E R C?', a: 'M E R C is a healthcare insurance distribution and technology platform purpose-built for the UAE and GCC markets. We are a distribution and technology facilitator — not an insurer, TPA, or reinsurer.' },
+  { q: 'How does M E R C work?', a: 'Our platform provides six core infrastructure layers: Embedded Distribution, API-Driven Technology, Embedded Healthcare Services, Real-Time Analytics, Fraud Detection, and Renewal Automation.' },
+  { q: 'Who can use M E R C?', a: 'M E R C serves insurance companies, brokers, healthcare providers, and digital health platforms operating in the UAE and GCC.' },
+  { q: 'Is M E R C an insurance company?', a: 'No. All insurance products are underwritten and issued by licensed partner insurance companies regulated by UAE authorities.' },
   { q: 'How quickly can we deploy?', a: 'Partners can deploy compliant insurance products in weeks, not months, with our modular architecture and zero CAPEX SaaS model.' },
-  { q: 'How do I get started?', a: 'Contact us at hello@merchealth.ae for general enquiries, insurers@merchealth.ae for partnerships, or api@merchealth.ae for developer access.' },
+  { q: 'How do I get started?', a: 'Contact us at hello@merc.care for general enquiries, insurers@merc.care for partnerships, or api@merc.care for developer access.' },
 ]
 
 export function Faq() {

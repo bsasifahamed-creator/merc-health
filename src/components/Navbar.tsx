@@ -29,8 +29,8 @@ export function Navbar() {
                  px-[clamp(1.5rem,5vw,4rem)] py-5
                  backdrop-blur-[20px] border-b border-border-custom"
     >
-      <a href="#" className="flex flex-col">
-        <span className="text-xl sm:text-2xl font-semibold tracking-tight text-gold font-heading">MERC</span>
+      <a href="#" className="flex items-center gap-3">
+        <img src="/logo.png" alt="M E R C" className="h-10 sm:h-12 w-auto" />
         <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden sm:block">Modern Embedded Refined Care</span>
       </a>
 
@@ -45,7 +45,7 @@ export function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-4">
-        <a href="#cta-band" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
+        <a href="mailto:hello@merc.care" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
           Request Access
           <ArrowUpRight className="h-4 w-4" />
         </a>
@@ -79,6 +79,7 @@ export function Navbar() {
             </button>
 
             <nav className="flex flex-col items-center gap-6 sm:gap-8">
+              <img src="/logo.png" alt="M E R C" className="h-16 sm:h-20 w-auto mb-4" />
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.label}
@@ -93,7 +94,7 @@ export function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#cta-band"
+                href="mailto:hello@merc.care"
                 onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
