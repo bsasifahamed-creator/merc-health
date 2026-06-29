@@ -67,14 +67,14 @@ export function ParallaxHero() {
           }}
         />
 
-        {/* Content Layer (moves: 20%, sits between Layer 4 and Family) */}
+        {/* Content Layer */}
         <div
           data-parallax-layer="content"
-          className="flex items-center justify-start w-full h-[100svh] absolute top-0 left-0 z-20 will-change-transform px-6 lg:px-16"
+          className="flex items-start justify-start w-full h-[100svh] absolute top-0 left-0 z-20 will-change-transform px-6 lg:px-16"
         >
-          <div className="max-w-3xl text-left pt-24 sm:pt-28">
-            <div className="font-mono text-[0.6rem] sm:text-[0.72rem] tracking-[0.2em] sm:tracking-[0.32em] uppercase text-teal mb-4 sm:mb-6 flex items-center justify-start gap-2 sm:gap-3 flex-wrap">
-              <span className="inline-block w-4 h-px sm:w-6 bg-teal shrink-0" />
+          <div className="max-w-3xl text-left pt-28 sm:pt-32 lg:pt-36">
+            <div className="font-mono text-[0.7rem] sm:text-[0.75rem] tracking-[0.25em] sm:tracking-[0.32em] uppercase text-teal mb-4 sm:mb-6 flex items-center justify-start gap-2 sm:gap-3 flex-wrap">
+              <span className="inline-block w-5 h-px sm:w-6 bg-teal shrink-0" />
               UAE · GCC · Healthcare Insurance
             </div>
 

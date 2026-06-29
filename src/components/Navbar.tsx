@@ -30,7 +30,7 @@ export function Navbar() {
                  backdrop-blur-[20px] border-b border-border-custom"
     >
       <a href="#" className="flex items-center gap-3 sm:gap-4">
-        <img src="/logo.png" alt="M E R C" className="h-9 sm:h-11 w-auto" />
+        <img src="/logo.png" alt="M E R C" className="h-8 sm:h-10 w-auto" />
         <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden sm:block">Modern Embedded Refined Care</span>
       </a>
 
@@ -79,7 +79,7 @@ export function Navbar() {
             </button>
 
             <nav className="flex flex-col items-center gap-6 sm:gap-8">
-              <img src="/logo.png" alt="M E R C" className="h-14 sm:h-16 w-auto mb-4" />
+              <img src="/logo.png" alt="M E R C" className="h-12 sm:h-14 w-auto mb-4" />
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.label}
