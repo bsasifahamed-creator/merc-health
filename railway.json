@@ -1,0 +1,12 @@
+{
+  "build": {
+    "command": "npm run build",
+    "outputDir": "dist"
+  },
+  "plugins": {
+    "node": {
+      "installCommand": "npm install",
+      "startCommand": "npm run preview"
+    }
+  }
+}
