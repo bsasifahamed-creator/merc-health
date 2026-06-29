@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           <div>
-            <img src="/logo.png" alt="M E R C" className="h-14 sm:h-16 w-auto mb-3 sm:mb-4" />
+            <img src="/logo.png" alt="M E R C" className="h-12 sm:h-14 w-auto mb-3 sm:mb-4" />
             <p className="text-sm sm:text-base text-text-body leading-relaxed font-body">
               The operating system for modern healthcare insurance distribution across the UAE and GCC.
             </p>

@@ -26,11 +26,11 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between
-                 px-[clamp(1.5rem,5vw,4rem)] py-5
+                 px-[clamp(1.5rem,5vw,4rem)] py-5 sm:py-6
                  backdrop-blur-[20px] border-b border-border-custom"
     >
-      <a href="#" className="flex items-center gap-3">
-        <img src="/logo.png" alt="M E R C" className="h-10 sm:h-12 w-auto" />
+      <a href="#" className="flex items-center gap-3 sm:gap-4">
+        <img src="/logo.png" alt="M E R C" className="h-9 sm:h-11 w-auto" />
         <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden sm:block">Modern Embedded Refined Care</span>
       </a>
 
@@ -79,7 +79,7 @@ export function Navbar() {
             </button>
 
             <nav className="flex flex-col items-center gap-6 sm:gap-8">
-              <img src="/logo.png" alt="M E R C" className="h-16 sm:h-20 w-auto mb-4" />
+              <img src="/logo.png" alt="M E R C" className="h-14 sm:h-16 w-auto mb-4" />
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.label}
