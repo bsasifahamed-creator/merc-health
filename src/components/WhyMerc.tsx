@@ -16,11 +16,7 @@ function wrap(min: number, max: number, v: number): number {
   return ((((v - min) % range) + range) % range) + min
 }
 
-const CARD_W = 380
-const GAP = 20
-
 export function WhyMerc() {
-  const rowRef = useRef<HTMLDivElement | null>(null)
   const [active, setActive] = useState<number | null>(null)
 
   const getStep = () => {
