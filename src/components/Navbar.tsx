@@ -48,7 +48,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="mailto:hello@merc.care" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
+            <a href="mailto:operations@merc.care" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
               Request Access
               <ArrowUpRight className="h-4 w-4" />
             </a>
@@ -105,7 +105,7 @@ export function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="mailto:hello@merc.care"
+                href="mailto:operations@merc.care"
                 onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

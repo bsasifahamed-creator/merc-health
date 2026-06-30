@@ -1,7 +1,7 @@
 const LINKS = {
   platform: ['Embedded Distribution', 'API Infrastructure', 'Analytics Engine', 'Fraud Detection'],
   partners: ['Insurer Partnerships', 'Broker Onboarding', 'Provider Networks', 'Developer API'],
-  connect: ['hello@merc.care', 'Dubai, UAE', 'LinkedIn'],
+  connect: ['operations@merc.care', 'Dubai, UAE', 'LinkedIn'],
 }
 
 export function Footer() {

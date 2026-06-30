@@ -93,7 +93,7 @@ export function MercVerticals() {
                 </ul>
 
                 <a
-                  href="mailto:hello@merc.care"
+                  href="mailto:operations@merc.care"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors font-body group/link"
                 >
                   Know More
@@ -110,7 +110,7 @@ export function MercVerticals() {
               MERC Care drives member retention. MERC Protect plugs the gaps the market leaves open.
             </p>
             <a
-              href="mailto:hello@merc.care"
+              href="mailto:operations@merc.care"
               className="inline-flex items-center gap-2 bg-gold text-navy rounded-full px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:bg-gold-light transition-colors font-body"
             >
               Talk to Us

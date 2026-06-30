@@ -11,7 +11,7 @@ export function CtaBand() {
           Join the leading insurers, brokers, and healthcare providers already leveraging M E R C&apos;s infrastructure across the UAE and GCC.
         </p>
         <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-          <a href="mailto:hello@merc.care" className="bg-gold text-navy rounded-full px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold inline-flex items-center gap-2 hover:bg-gold-light transition-colors font-body">
+          <a href="mailto:operations@merc.care" className="bg-gold text-navy rounded-full px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold inline-flex items-center gap-2 hover:bg-gold-light transition-colors font-body">
             Get Started
             <ArrowUpRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </a>

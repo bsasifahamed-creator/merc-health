@@ -7,7 +7,7 @@ const FAQ_ITEMS = [
   { q: 'Who can use M E R C?', a: 'M E R C serves insurance companies, brokers, healthcare providers, and digital health platforms operating in the UAE and GCC.' },
   { q: 'Is M E R C an insurance company?', a: 'No. All insurance products are underwritten and issued by licensed partner insurance companies regulated by UAE authorities.' },
   { q: 'How quickly can we deploy?', a: 'Partners can deploy compliant insurance products in weeks, not months, with our modular architecture and zero CAPEX SaaS model.' },
-  { q: 'How do I get started?', a: 'Contact us at hello@merc.care for general enquiries, insurers@merc.care for partnerships, or api@merc.care for developer access.' },
+  { q: 'How do I get started?', a: 'Contact us at operations@merc.care for general enquiries, insurers@merc.care for partnerships, or api@merc.care for developer access.' },
 ]
 
 export function Faq() {
