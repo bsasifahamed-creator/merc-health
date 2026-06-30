@@ -64,4 +64,3 @@ body {
 ::-webkit-scrollbar-track { background: #08111F; }
 ::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.2); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(201, 168, 76, 0.4); }
-img { max-width: 100%; height: auto; }
