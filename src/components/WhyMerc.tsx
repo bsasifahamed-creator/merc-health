@@ -71,15 +71,7 @@ export function WhyMerc() {
 
       {/* Velocity-scrolling cards */}
       <div className="relative overflow-hidden py-4 sm:py-6">
-        <motion.div className="flex gap-3 sm:gap-5 w-max" style={{ x }}
-          drag="x"
-          dragConstraints={{ left: -10000, right: 10000 }}
-          onDrag={(_e, info) => {
-            // Optional: allow dragging if they try to swipe
-            const moveBy = info.delta.x;
-            baseX.set(baseX.get() + moveBy);
-          }}
-        >
+        <motion.div className="flex gap-3 sm:gap-5 w-max" style={{ x }}>
           {[...DIFFERENTIATORS, ...DIFFERENTIATORS].map((d, i) => {
             const isActive = active === i
             return (
