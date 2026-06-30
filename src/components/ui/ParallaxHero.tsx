@@ -118,7 +118,7 @@ export function ParallaxHero() {
 
         {/* Fade gradient at bottom */}
         <div
-          className="z-40 w-full h-[60%] absolute bottom-0 left-0 pointer-events-none"
+          className="z-15 w-full h-[60%] absolute bottom-0 left-0 pointer-events-none"
           style={{
             background:
               'linear-gradient(to top, rgba(8,17,31,1) 0%, rgba(8,17,31,0.738) 19%, rgba(8,17,31,0.541) 34%, rgba(8,17,31,0.382) 47%, rgba(8,17,31,0.278) 56.5%, rgba(8,17,31,0.194) 65%, rgba(8,17,31,0.126) 73%, rgba(8,17,31,0.075) 80.2%, rgba(8,17,31,0.042) 86.1%, rgba(8,17,31,0.021) 91%, rgba(8,17,31,0.008) 95.2%, rgba(8,17,31,0.002) 98.2%, transparent 100%)',
