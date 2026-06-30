@@ -72,7 +72,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[100] bg-navy flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[100] bg-navy flex flex-col items-center overflow-y-auto"
           >
             <button
               type="button"
@@ -83,7 +83,7 @@ export function Navbar() {
               <X className="w-7 h-7" />
             </button>
 
-            <nav className="flex flex-col items-center gap-6">
+            <nav className="flex flex-col items-center gap-6 pt-20 pb-12 w-full px-6">
               <div className="flex items-center gap-3 mb-6">
                 <img src="/logo.png" alt="M E R C" className="h-12 sm:h-14 w-auto" />
                 <div className="flex flex-col">
