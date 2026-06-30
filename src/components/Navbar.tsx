@@ -12,13 +12,6 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     if (mobileOpen) {
@@ -33,8 +26,7 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50
-                   backdrop-blur-[20px] border-b border-border-custom transition-colors duration-300
-                   ${scrolled ? 'bg-[rgba(8,17,31,0.97)]' : 'bg-[rgba(8,17,31,0.72)]'}`}
+                   backdrop-blur-[20px] border-b border-border-custom transition-colors duration-300 bg-[rgba(8,17,31,0.97)]`}
       >
         <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-[clamp(1.5rem,5vw,4rem)] py-5 sm:py-6">
           <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0">
