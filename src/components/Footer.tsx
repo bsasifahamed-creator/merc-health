@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="px-4 sm:px-6 lg:px-16 py-14 sm:py-20 border-t border-border-custom bg-[#060E18]">
       <div className="max-w-6xl mx-auto">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-14">
           <div>
             <img src="/logo.png" alt="M E R C" className="h-10 sm:h-12 w-auto mb-3 sm:mb-4" />
             <p className="text-sm sm:text-base text-text-body leading-relaxed font-body">

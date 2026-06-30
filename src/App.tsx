@@ -4,6 +4,7 @@ import { About } from './components/About'
 import { Services } from './components/Services'
 import { Portfolio } from './components/Portfolio'
 import { WhyMerc } from './components/WhyMerc'
+import { MercVerticals } from './components/MercVerticals'
 import { Faq } from './components/Faq'
 import { CtaBand } from './components/CtaBand'
 import { Footer } from './components/Footer'
@@ -19,6 +20,7 @@ export default function App() {
         <Services />
         <Portfolio />
         <WhyMerc />
+        <MercVerticals />
         <Faq />
         <CtaBand />
         <Footer />

@@ -44,7 +44,7 @@ export function ParallaxHero() {
 
   return (
     <section className="relative overflow-hidden bg-navy">
-      <div ref={containerRef} className="relative min-h-[100svh] flex items-center justify-center w-full">
+      <div ref={containerRef} className="relative min-h-[70vh] sm:min-h-[100svh] flex items-center justify-center w-full">
         
         {/* Background Layer (Single 2D Image with Parallax) */}
         <div className="absolute top-0 left-0 w-full h-[120%] overflow-hidden pointer-events-none z-10">

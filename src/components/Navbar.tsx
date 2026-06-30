@@ -5,8 +5,8 @@ import { ArrowUpRight, X } from 'lucide-react'
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Products', href: '#portfolio' },
+  { label: 'Verticals', href: '#verticals' },
   { label: 'Why MERC', href: '#different' },
-  { label: 'Compliance', href: '#regulatory' },
   { label: 'FAQ', href: '#faq' },
 ]
 

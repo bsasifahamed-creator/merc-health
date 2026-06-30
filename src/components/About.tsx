@@ -6,7 +6,7 @@ export function About() {
   return (
     <section id="about" className="px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-28 bg-slate">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           {/* Left column */}
           <FadeUpReveal>
             <div className="font-mono text-[0.65rem] sm:text-[0.72rem] tracking-[0.2em] sm:tracking-[0.32em] uppercase text-teal mb-3 sm:mb-4">
