@@ -14,7 +14,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-28 bg-navy">
+    <section id="faq" className="px-4 sm:px-6 lg:px-16 py-8 sm:py-12 lg:py-16 bg-navy">
       <div className="max-w-3xl mx-auto">
         <div className="animate-fade-up mb-10 sm:mb-14 text-center">
           <span className="font-mono text-[0.7rem] sm:text-[0.8rem] tracking-[0.28em] uppercase text-teal">FAQ</span>

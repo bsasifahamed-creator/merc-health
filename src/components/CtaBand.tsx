@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 
 export function CtaBand() {
   return (
-    <section className="px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-28 bg-slate">
+    <section className="px-4 sm:px-6 lg:px-16 py-8 sm:py-12 lg:py-16 bg-slate">
       <div className="max-w-4xl mx-auto text-center animate-fade-up">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-light tracking-tight mb-4 sm:mb-5 text-ivory leading-tight">
           Ready to Deploy <em className="text-gold">Next-Generation</em> Infrastructure?

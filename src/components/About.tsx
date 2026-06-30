@@ -4,7 +4,7 @@ import { SplitText } from '@/components/ui/SplitText'
 
 export function About() {
   return (
-    <section id="about" className="px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-28 bg-slate">
+    <section id="about" className="px-4 sm:px-6 lg:px-16 py-8 sm:py-12 lg:py-16 bg-slate">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           {/* Left column */}

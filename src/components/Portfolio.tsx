@@ -22,7 +22,7 @@ export function Portfolio() {
   }, [])
 
   return (
-    <section id="portfolio" className="px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-28 bg-navy">
+    <section id="portfolio" className="px-4 sm:px-6 lg:px-16 py-8 sm:py-12 lg:py-16 bg-navy">
       <div className="max-w-6xl mx-auto">
         <div className="animate-fade-up mb-8 sm:mb-10 text-center">
           <span className="font-mono text-[0.7rem] sm:text-[0.8rem] tracking-[0.28em] uppercase text-gold">Products</span>
