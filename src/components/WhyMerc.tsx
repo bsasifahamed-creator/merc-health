@@ -60,7 +60,6 @@ export function WhyMerc() {
 
   const directionFactor = useRef<number>(1)
   useAnimationFrame((_t, delta) => {
-    if (isMobile) return
     let moveBy = directionFactor.current * 40 * (delta / 1000)
     if (velocityFactor.get() < 0) directionFactor.current = -1
     else if (velocityFactor.get() > 0) directionFactor.current = 1
@@ -88,92 +87,24 @@ export function WhyMerc() {
         </div>
       </div>
 
-      {/* Mobile native swipe carousel */}
-      <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 px-4 py-4 pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {DIFFERENTIATORS.map((d, i) => {
-          const isActive = active === i
-          return (
-            <div
-              key={`mobile-${d.number}`}
-              onClick={() => setActive(isActive ? null : i)}
-              className="relative flex-shrink-0 snap-center w-[85vw] h-[340px] rounded-[1.25rem] overflow-hidden cursor-pointer group"
-              style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease', transform: isActive ? 'scale(1.02)' : 'scale(1)' }}
-            >
-              {/* Image */}
-              <div
-                style={{
-                  position: 'absolute', inset: 0,
-                  backgroundImage: `url(${d.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  transform: isActive ? 'scale(1.15)' : 'scale(1)',
-                  transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
-                }}
-              />
-              {/* Black overlay */}
-              <div
-                style={{
-                  position: 'absolute', inset: 0,
-                  backgroundColor: 'black',
-                  opacity: isActive ? 0.65 : 0.2,
-                  transition: 'opacity 0.4s ease',
-                }}
-              />
-              {/* Number */}
-              <span
-                className="absolute top-5 left-5 text-5xl font-heading font-light text-gold pointer-events-none"
-                style={{ opacity: isActive ? 0 : 0.12, transition: 'opacity 0.3s ease' }}
-              >
-                {d.number}
-              </span>
-              {/* Default text */}
-              <div
-                className="absolute inset-0 flex flex-col justify-end p-5"
-                style={{
-                  opacity: isActive ? 0 : 1,
-                  transform: isActive ? 'translateY(10px)' : 'translateY(0)',
-                  transition: 'opacity 0.25s ease, transform 0.25s ease',
-                }}
-              >
-                <h3 className="text-xl font-semibold text-ivory font-body">{d.title}</h3>
-              </div>
-              {/* Active text */}
-              <div
-                className="absolute inset-0 flex flex-col justify-end p-5"
-                style={{
-                  opacity: isActive ? 1 : 0,
-                  transform: isActive ? 'translateY(0)' : 'translateY(20px)',
-                  transition: 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                }}
-              >
-                <span className="font-mono text-[0.65rem] tracking-[0.15em] text-gold block mb-1">{d.number}</span>
-                <h3 className="text-xl font-semibold mb-1 text-gold font-body">{d.title}</h3>
-                <p className="text-sm text-white/90 leading-relaxed font-body">{d.desc}</p>
-              </div>
-              {/* Gold bottom bar */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold"
-                style={{
-                  transform: isActive ? 'scaleX(1)' : 'scaleX(0)',
-                  transformOrigin: 'center',
-                  transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                }}
-              />
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Desktop Velocity-scrolling cards */}
-      <div className="hidden sm:block relative overflow-hidden py-6">
-        <motion.div ref={rowRef} className="flex gap-5" style={{ x }}>
+      {/* Velocity-scrolling cards */}
+      <div className="relative overflow-hidden py-4 sm:py-6">
+        <motion.div ref={rowRef} className="flex gap-3 sm:gap-5" style={{ x }}
+          drag="x"
+          dragConstraints={rowRef}
+          onDrag={(e, info) => {
+            // Optional: allow dragging if they try to swipe
+            const moveBy = info.delta.x;
+            baseX.set(baseX.get() + moveBy);
+          }}
+        >
           {[...DIFFERENTIATORS, ...DIFFERENTIATORS].map((d, i) => {
             const isActive = active === i
             return (
               <div
-                key={`desktop-${d.number}-${i}`}
+                key={`${d.number}-${i}`}
                 onClick={() => setActive(isActive ? null : i)}
-                className="relative flex-shrink-0 sm:w-[320px] lg:w-[380px] sm:h-[280px] lg:h-[320px] sm:rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden cursor-pointer group"
+                className="relative flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] h-[240px] sm:h-[280px] lg:h-[320px] rounded-[1.25rem] sm:rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden cursor-pointer group"
                 style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease', transform: isActive ? 'scale(1.03)' : 'scale(1)' }}
               >
                 {/* Image */}
@@ -200,7 +131,7 @@ export function WhyMerc() {
 
                 {/* Number */}
                 <span
-                  className="absolute sm:top-6 left-7 sm:text-6xl lg:text-7xl font-heading font-light text-gold pointer-events-none"
+                  className="absolute top-4 sm:top-6 left-5 sm:left-7 text-5xl sm:text-6xl lg:text-7xl font-heading font-light text-gold pointer-events-none"
                   style={{ opacity: isActive ? 0 : 0.12, transition: 'opacity 0.3s ease' }}
                 >
                   {d.number}
@@ -208,28 +139,28 @@ export function WhyMerc() {
 
                 {/* Default text */}
                 <div
-                  className="absolute inset-0 flex flex-col justify-end sm:p-7"
+                  className="absolute inset-0 flex flex-col justify-end p-5 sm:p-7"
                   style={{
                     opacity: isActive ? 0 : 1,
                     transform: isActive ? 'translateY(10px)' : 'translateY(0)',
                     transition: 'opacity 0.25s ease, transform 0.25s ease',
                   }}
                 >
-                  <h3 className="sm:text-xl font-semibold text-ivory font-body">{d.title}</h3>
+                  <h3 className="text-base sm:text-xl font-semibold text-ivory font-body">{d.title}</h3>
                 </div>
 
                 {/* Active text */}
                 <div
-                  className="absolute inset-0 flex flex-col justify-end sm:p-7"
+                  className="absolute inset-0 flex flex-col justify-end p-5 sm:p-7"
                   style={{
                     opacity: isActive ? 1 : 0,
                     transform: isActive ? 'translateY(0)' : 'translateY(20px)',
                     transition: 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}
                 >
-                  <span className="font-mono sm:text-[0.72rem] tracking-[0.15em] text-gold block sm:mb-2">{d.number}</span>
-                  <h3 className="sm:text-2xl font-semibold sm:mb-2 text-gold font-body">{d.title}</h3>
-                  <p className="sm:text-sm text-white/90 leading-relaxed font-body">{d.desc}</p>
+                  <span className="font-mono text-[0.6rem] sm:text-[0.72rem] tracking-[0.15em] text-gold block mb-1 sm:mb-2">{d.number}</span>
+                  <h3 className="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2 text-gold font-body">{d.title}</h3>
+                  <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-body">{d.desc}</p>
                 </div>
 
                 {/* Gold bottom bar */}
@@ -247,16 +178,16 @@ export function WhyMerc() {
         </motion.div>
 
         {/* Fade edges */}
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-10 sm:w-20 bg-gradient-to-r from-slate to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-10 sm:w-20 bg-gradient-to-l from-slate to-transparent z-10 pointer-events-none" />
 
         {/* Left button */}
-        <button onClick={goLeft} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Previous">
-          <ArrowLeft className="h-5 w-5" />
+        <button onClick={goLeft} className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Previous">
+          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
         {/* Right button */}
-        <button onClick={goRight} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Next">
-          <ArrowRight className="h-5 w-5" />
+        <button onClick={goRight} className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Next">
+          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
       </div>
     </section>
