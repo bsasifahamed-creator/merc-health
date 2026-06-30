@@ -32,44 +32,45 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between
-                   px-[clamp(1.5rem,5vw,4rem)] py-5 sm:py-6
+        className={`fixed top-0 left-0 right-0 z-50
                    backdrop-blur-[20px] border-b border-border-custom transition-colors duration-300
                    ${scrolled ? 'bg-[rgba(8,17,31,0.97)]' : 'bg-[rgba(8,17,31,0.72)]'}`}
       >
-        <a href="#" className="flex items-center gap-2 sm:gap-3">
-          <img src="/logo.png" alt="M E R C" className="h-8 sm:h-10 w-auto" />
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="font-heading text-lg sm:text-xl font-semibold text-gold tracking-widest">M E R C</span>
-            <span className="font-mono text-[0.55rem] sm:text-[0.65rem] tracking-[0.1em] text-platinum/70 hidden sm:block leading-tight">Modern Embedded Refined Care</span>
-          </div>
-        </a>
-
-        <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href}
-              className="font-body text-[0.78rem] tracking-[0.12em] uppercase text-muted hover:text-gold transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        <div className="hidden md:flex items-center gap-4">
-          <a href="mailto:hello@merc.care" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
-            Request Access
-            <ArrowUpRight className="h-4 w-4" />
+        <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-[clamp(1.5rem,5vw,4rem)] py-5 sm:py-6">
+          <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <img src="/logo.png" alt="M E R C" className="h-8 sm:h-10 w-auto" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="font-heading text-lg sm:text-xl font-semibold text-gold tracking-widest">M E R C</span>
+              <span className="font-mono text-[0.55rem] sm:text-[0.65rem] tracking-[0.1em] text-platinum/70 hidden sm:block leading-tight">Modern Embedded Refined Care</span>
+            </div>
           </a>
-        </div>
 
-        <button
-          type="button"
-          onClick={() => setMobileOpen(true)}
-          className="md:hidden text-platinum bg-transparent border-none cursor-pointer p-2 -mr-2"
-          aria-label="Open menu"
-        >
-          <Menu className="w-7 h-7" />
-        </button>
+          <div className="hidden md:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <a key={link.label} href={link.href}
+                className="font-body text-[0.78rem] tracking-[0.12em] uppercase text-muted hover:text-gold transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="hidden md:flex items-center gap-4">
+            <a href="mailto:hello@merc.care" className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-medium font-body hover:bg-gold hover:text-navy transition-colors duration-200">
+              Request Access
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen(true)}
+            className="md:hidden text-platinum bg-transparent border-none cursor-pointer p-2 -mr-2"
+            aria-label="Open menu"
+          >
+            <Menu className="w-7 h-7" />
+          </button>
+        </div>
       </header>
 
       <AnimatePresence>

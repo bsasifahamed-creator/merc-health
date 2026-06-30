@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState, useCallback } from 'react'
+import { useRef, useState, useCallback } from 'react'
 import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame, animate } from 'motion/react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
@@ -11,17 +11,6 @@ const DIFFERENTIATORS = [
   { number: '06', title: 'Predictive Analytics', desc: 'AI-powered portfolio insights and automated risk scoring.', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop' },
 ]
 
-function useElementWidth(ref: React.RefObject<HTMLElement | null>): number {
-  const [width, setWidth] = useState(0)
-  useLayoutEffect(() => {
-    function update() { if (ref.current) setWidth(ref.current.offsetWidth) }
-    update()
-    window.addEventListener('resize', update)
-    return () => window.removeEventListener('resize', update)
-  }, [ref])
-  return width
-}
-
 function wrap(min: number, max: number, v: number): number {
   const range = max - min
   return ((((v - min) % range) + range) % range) + min
@@ -29,10 +18,17 @@ function wrap(min: number, max: number, v: number): number {
 
 const CARD_W = 380
 const GAP = 20
-const STEP = CARD_W + GAP
 
 export function WhyMerc() {
+  const rowRef = useRef<HTMLDivElement | null>(null)
   const [active, setActive] = useState<number | null>(null)
+
+  const getStep = () => {
+    if (typeof window === 'undefined') return 400
+    if (window.innerWidth >= 1024) return 380 + 20 // lg (w-[380px] + gap-5 [20px])
+    if (window.innerWidth >= 640) return 320 + 20  // sm (w-[320px] + gap-5 [20px])
+    return 280 + 12 // mobile (w-[280px] + gap-3 [12px])
+  }
 
   const baseX = useMotionValue(0)
   const smoothX = useSpring(baseX, { damping: 80, stiffness: 120, mass: 0.8 })
@@ -42,12 +38,10 @@ export function WhyMerc() {
   const smoothVelocity = useSpring(scrollVelocity, { damping: 80, stiffness: 150 })
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 3], { clamp: false })
 
-  const rowRef = useRef<HTMLDivElement>(null)
-  const rowWidth = useElementWidth(rowRef)
-
   const x = useTransform(smoothX, (v) => {
-    if (rowWidth === 0) return '0px'
-    return `${wrap(-rowWidth, 0, v)}px`
+    const wrapDistance = getStep() * DIFFERENTIATORS.length
+    if (wrapDistance === 0) return '0px'
+    return `${wrap(-wrapDistance, 0, v)}px`
   })
 
   const directionFactor = useRef<number>(1)
@@ -60,11 +54,11 @@ export function WhyMerc() {
   })
 
   const goLeft = useCallback(() => {
-    animate(baseX, baseX.get() - STEP, { type: 'spring', damping: 60, stiffness: 100, mass: 0.6 })
+    animate(baseX, baseX.get() - getStep(), { type: 'spring', damping: 60, stiffness: 100, mass: 0.6 })
   }, [baseX])
 
   const goRight = useCallback(() => {
-    animate(baseX, baseX.get() + STEP, { type: 'spring', damping: 60, stiffness: 100, mass: 0.6 })
+    animate(baseX, baseX.get() + getStep(), { type: 'spring', damping: 60, stiffness: 100, mass: 0.6 })
   }, [baseX])
 
   return (
@@ -81,9 +75,9 @@ export function WhyMerc() {
 
       {/* Velocity-scrolling cards */}
       <div className="relative overflow-hidden py-4 sm:py-6">
-        <motion.div ref={rowRef} className="flex gap-3 sm:gap-5" style={{ x }}
+        <motion.div className="flex gap-3 sm:gap-5 w-max" style={{ x }}
           drag="x"
-          dragConstraints={rowRef}
+          dragConstraints={{ left: -10000, right: 10000 }}
           onDrag={(_e, info) => {
             // Optional: allow dragging if they try to swipe
             const moveBy = info.delta.x;
