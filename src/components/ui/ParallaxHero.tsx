@@ -47,9 +47,8 @@ export function ParallaxHero() {
       <div ref={containerRef} className="relative min-h-[70vh] sm:min-h-[100svh] flex items-center justify-center w-full">
         
         {/* Background Layer (Single 2D Image with Parallax) */}
-        <div className="absolute -top-[15%] left-0 w-full h-[130%] overflow-hidden pointer-events-none z-10">
+        <div data-parallax-layer="bg" className="absolute -top-[15%] left-0 w-full h-[130%] overflow-hidden pointer-events-none z-10">
           <img
-            data-parallax-layer="bg"
             src="/parallax/hero-bg.webp"
             alt="MERC Health"
             className="absolute inset-0 w-full h-full object-cover object-[center_15%] sm:object-top will-change-transform"
