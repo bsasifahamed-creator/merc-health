@@ -30,8 +30,8 @@ export function Navbar() {
                  backdrop-blur-[20px] border-b border-border-custom"
     >
       <a href="#" className="flex items-center gap-3 sm:gap-4">
-        <img src="/logo.png" alt="M E R C" className="h-8 sm:h-10 w-auto" />
-        <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden sm:block">Modern Embedded Refined Care</span>
+        <img src="/logo.png" alt="M E R C" className="h-12 sm:h-16 w-auto" />
+        <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden md:block">Modern Embedded Refined Care</span>
       </a>
 
       <div className="hidden md:flex items-center gap-8">

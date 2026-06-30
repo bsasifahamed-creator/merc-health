@@ -43,7 +43,7 @@ export function ParallaxHero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-navy">
+    <section className="relative overflow-hidden bg-navy mt-[88px] sm:mt-[112px]">
       <div ref={containerRef} className="relative min-h-[70vh] sm:min-h-[100svh] flex items-center justify-center w-full">
         
         {/* Background Layer (Single 2D Image with Parallax) */}
@@ -52,7 +52,7 @@ export function ParallaxHero() {
             data-parallax-layer="bg"
             src="/parallax/hero-bg.webp"
             alt="MERC Health"
-            className="absolute inset-0 w-full h-full object-cover object-center will-change-transform"
+            className="absolute inset-0 w-full h-full object-cover object-[center_15%] sm:object-top will-change-transform"
             loading="eager"
           />
         </div>
