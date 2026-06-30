@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState, useCallback, useEffect } from 'react'
+import { useRef, useLayoutEffect, useState, useCallback } from 'react'
 import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame, animate } from 'motion/react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
@@ -33,14 +33,6 @@ const STEP = CARD_W + GAP
 
 export function WhyMerc() {
   const [active, setActive] = useState<number | null>(null)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768)
-    check()
-    window.addEventListener('resize', check)
-    return () => window.removeEventListener('resize', check)
-  }, [])
 
   const baseX = useMotionValue(0)
   const smoothX = useSpring(baseX, { damping: 80, stiffness: 120, mass: 0.8 })
@@ -92,7 +84,7 @@ export function WhyMerc() {
         <motion.div ref={rowRef} className="flex gap-3 sm:gap-5" style={{ x }}
           drag="x"
           dragConstraints={rowRef}
-          onDrag={(e, info) => {
+          onDrag={(_e, info) => {
             // Optional: allow dragging if they try to swipe
             const moveBy = info.delta.x;
             baseX.set(baseX.get() + moveBy);
