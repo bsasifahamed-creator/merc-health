@@ -71,7 +71,14 @@ export function WhyMerc() {
 
       {/* Velocity-scrolling cards */}
       <div className="relative overflow-hidden py-4 sm:py-6">
-        <motion.div className="flex gap-3 sm:gap-5 w-max" style={{ x }}>
+        <motion.div
+          className="flex gap-3 sm:gap-5 w-max touch-pan-y"
+          style={{ x }}
+          onPan={(_e, info) => {
+            // Allows 1:1 smooth swiping left/right without extreme bounds bouncing
+            baseX.set(baseX.get() + info.delta.x)
+          }}
+        >
           {[...DIFFERENTIATORS, ...DIFFERENTIATORS].map((d, i) => {
             const isActive = active === i
             return (
@@ -156,12 +163,12 @@ export function WhyMerc() {
         <div className="absolute inset-y-0 right-0 w-10 sm:w-20 bg-gradient-to-l from-slate to-transparent z-10 pointer-events-none" />
 
         {/* Left button */}
-        <button onClick={goLeft} className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Previous">
-          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+        <button onClick={goLeft} className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold active:scale-90 active:border-gold active:text-gold active:bg-white/10 transition-all duration-200 flex items-center justify-center cursor-pointer" aria-label="Previous">
+          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 pointer-events-none" />
         </button>
         {/* Right button */}
-        <button onClick={goRight} className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold transition-colors flex items-center justify-center cursor-pointer" aria-label="Next">
-          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+        <button onClick={goRight} className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-border-custom bg-card/80 backdrop-blur-sm text-platinum hover:border-gold hover:text-gold active:scale-90 active:border-gold active:text-gold active:bg-white/10 transition-all duration-200 flex items-center justify-center cursor-pointer" aria-label="Next">
+          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 pointer-events-none" />
         </button>
       </div>
     </section>
