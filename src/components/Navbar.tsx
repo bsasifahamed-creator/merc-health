@@ -37,9 +37,12 @@ export function Navbar() {
                    backdrop-blur-[20px] border-b border-border-custom transition-colors duration-300
                    ${scrolled ? 'bg-[rgba(8,17,31,0.97)]' : 'bg-[rgba(8,17,31,0.72)]'}`}
       >
-        <a href="#" className="flex items-center gap-3 sm:gap-4">
+        <a href="#" className="flex items-center gap-2 sm:gap-3">
           <img src="/logo.png" alt="M E R C" className="h-8 sm:h-10 w-auto" />
-          <span className="font-mono text-[0.6rem] sm:text-[0.68rem] tracking-[0.15em] text-platinum leading-tight hidden md:block">Modern Embedded Refined Care</span>
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="font-heading text-lg sm:text-xl font-semibold text-gold tracking-widest">M E R C</span>
+            <span className="font-mono text-[0.55rem] sm:text-[0.65rem] tracking-[0.1em] text-platinum/70 hidden sm:block leading-tight">Modern Embedded Refined Care</span>
+          </div>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -88,7 +91,13 @@ export function Navbar() {
             </button>
 
             <nav className="flex flex-col items-center gap-6">
-              <img src="/logo.png" alt="M E R C" className="h-12 sm:h-14 w-auto mb-6" />
+              <div className="flex items-center gap-3 mb-6">
+                <img src="/logo.png" alt="M E R C" className="h-12 sm:h-14 w-auto" />
+                <div className="flex flex-col">
+                  <span className="font-heading text-2xl font-semibold text-gold tracking-widest">M E R C</span>
+                  <span className="font-mono text-[0.6rem] tracking-[0.1em] text-platinum/70 leading-tight">Modern Embedded Refined Care</span>
+                </div>
+              </div>
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.label}
