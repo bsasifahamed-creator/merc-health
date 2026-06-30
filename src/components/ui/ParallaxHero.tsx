@@ -73,7 +73,7 @@ export function ParallaxHero() {
         >
           <div className="max-w-3xl text-left pt-28 sm:pt-32 lg:pt-36">
             <div className="font-mono text-[0.7rem] sm:text-[0.75rem] tracking-[0.25em] sm:tracking-[0.32em] uppercase text-gold mb-4 sm:mb-6 flex items-center justify-start gap-2 sm:gap-3 flex-wrap">
-              <span className="inline-block w-5 h-px sm:w-6 bg-gold shrink-0" />
+              <span className="inline-block w-5 h-px sm:w-6 bg-teal shrink-0" />
               UAE · GCC · Healthcare Insurance
             </div>
 
@@ -118,7 +118,7 @@ export function ParallaxHero() {
 
         {/* Fade gradient at bottom */}
         <div
-          className="z-40 w-full h-[30%] absolute bottom-0 left-0 pointer-events-none"
+          className="z-40 w-full h-[60%] absolute bottom-0 left-0 pointer-events-none"
           style={{
             background:
               'linear-gradient(to top, rgba(8,17,31,1) 0%, rgba(8,17,31,0.738) 19%, rgba(8,17,31,0.541) 34%, rgba(8,17,31,0.382) 47%, rgba(8,17,31,0.278) 56.5%, rgba(8,17,31,0.194) 65%, rgba(8,17,31,0.126) 73%, rgba(8,17,31,0.075) 80.2%, rgba(8,17,31,0.042) 86.1%, rgba(8,17,31,0.021) 91%, rgba(8,17,31,0.008) 95.2%, rgba(8,17,31,0.002) 98.2%, transparent 100%)',
