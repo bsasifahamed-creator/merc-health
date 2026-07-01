@@ -26,7 +26,7 @@ export function Portfolio() {
         <div className="animate-fade-up mb-8 sm:mb-10 text-center">
           <span className="font-mono text-[0.7rem] sm:text-[0.8rem] tracking-[0.28em] uppercase text-gold">Products</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-light tracking-tight mt-3 text-ivory leading-tight">Purpose-Built Insurance Products</h2>
-          <p className="text-sm sm:text-base text-text-body mt-3 max-w-xl mx-auto font-body">Each product is designed for specific market segments, powered by our unified infrastructure layer.</p>
+          <p className="text-sm sm:text-base text-text-body mt-3 max-w-xl mx-auto font-body">From market intelligence to stakeholder alignment to a battle-tested tech platform — Merc hands you the whole stack, and the best-in-breed team to run it.</p>
         </div>
         <div className="animate-fade-up-delay">
           <CardStack
