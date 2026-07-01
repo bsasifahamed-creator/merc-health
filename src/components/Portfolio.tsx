@@ -3,12 +3,12 @@ import { CardStack } from '@/components/ui/card-stack'
 import type { CardStackItem } from '@/components/ui/card-stack'
 
 const PRODUCTS: CardStackItem[] = [
-  { id: 1, title: 'SME Group Plans', description: 'Group cover for 3–200-person teams, via MERC\'s broker engine with instant quotes and digital issuance.', tag: 'BROKER-DISTRIBUTED', imageSrc: '/products/sme-group.svg' },
-  { id: 2, title: 'Essential Benefits Plan', description: 'DHA-mandated entry-tier cover — a high-volume compliance segment with streamlined onboarding.', tag: 'MANDATORY · HIGH-VOLUME', imageSrc: '/products/ebp.svg' },
-  { id: 3, title: 'Enhanced EBP', description: 'Richer benefits above the EBP floor — better experience and margin for the upwardly mobile segment.', tag: 'UPGRADED TIER', imageSrc: '/products/enhanced-ebp.svg' },
-  { id: 4, title: 'IPMI & Enterprise', description: 'Cross-border cover for multinationals and expat families across the GCC with concierge services.', tag: 'CROSS-BORDER', imageSrc: '/products/ipmi.svg' },
-  { id: 5, title: 'Individual & Retail', description: 'Standalone cover for freelancers and the self-employed — digital-first issuance and telehealth-centric care.', tag: 'GROWTH SEGMENT', imageSrc: '/products/individual.svg' },
-  { id: 6, title: 'API & Integration Layer', description: 'Full REST API for product configuration, policy management, claims processing, and real-time event streaming.', tag: 'DEVELOPER', imageSrc: '/products/api-platform.svg' },
+  { id: 1, title: 'SME Group Plans', description: 'Group cover for 3–200-person teams, via MERC\'s broker engine with instant quotes and digital issuance.', tag: 'BROKER-DISTRIBUTED', imageSrc: '/products/sme-group.png' },
+  { id: 2, title: 'Essential Benefits Plan', description: 'DHA-mandated entry-tier cover — a high-volume compliance segment with streamlined onboarding.', tag: 'MANDATORY · HIGH-VOLUME', imageSrc: '/products/ebp.png' },
+  { id: 3, title: 'Enhanced EBP', description: 'Richer benefits above the EBP floor — better experience and margin for the upwardly mobile segment.', tag: 'UPGRADED TIER', imageSrc: '/products/enhanced-ebp.png' },
+  { id: 4, title: 'IPMI & Enterprise', description: 'Cross-border cover for multinationals and expat families across the GCC with concierge services.', tag: 'CROSS-BORDER', imageSrc: '/products/ipmi.png' },
+  { id: 5, title: 'Individual & Retail', description: 'Standalone cover for freelancers and the self-employed — digital-first issuance and telehealth-centric care.', tag: 'GROWTH SEGMENT', imageSrc: '/products/individual.png' },
+  { id: 6, title: 'API & Integration Layer', description: 'Full REST API for product configuration, policy management, claims processing, and real-time event streaming.', tag: 'DEVELOPER', imageSrc: '/products/api-platform.png' },
 ]
 
 export function Portfolio() {
