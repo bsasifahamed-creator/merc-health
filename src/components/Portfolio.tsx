@@ -8,7 +8,6 @@ const PRODUCTS: CardStackItem[] = [
   { id: 3, title: 'Enhanced EBP', description: 'Richer benefits above the EBP floor — better experience and margin for the upwardly mobile segment.', tag: 'UPGRADED TIER', imageSrc: '/products/enhanced-ebp.png' },
   { id: 4, title: 'IPMI & Enterprise', description: 'Cross-border cover for multinationals and expat families across the GCC with concierge services.', tag: 'CROSS-BORDER', imageSrc: '/products/ipmi.png' },
   { id: 5, title: 'Individual & Retail', description: 'Standalone cover for freelancers and the self-employed — digital-first issuance and telehealth-centric care.', tag: 'GROWTH SEGMENT', imageSrc: '/products/individual.png' },
-  { id: 6, title: 'API & Integration Layer', description: 'Full REST API for product configuration, policy management, claims processing, and real-time event streaming.', tag: 'DEVELOPER', imageSrc: '/products/api-platform.png' },
 ]
 
 export function Portfolio() {
