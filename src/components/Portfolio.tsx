@@ -3,12 +3,12 @@ import { CardStack } from '@/components/ui/card-stack'
 import type { CardStackItem } from '@/components/ui/card-stack'
 
 const PRODUCTS: CardStackItem[] = [
-  { id: 1, title: 'Chronic Care Ecosystem', description: 'End-to-end chronic disease management integrating continuous monitoring, care coordination, and predictive interventions.', tag: 'CHRONIC & COMPLEX', imageSrc: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop' },
-  { id: 2, title: "Women's Wellness & Maternity", description: "Comprehensive women's health coverage spanning maternity care, fertility support, and preventive wellness programs.", tag: "WOMEN'S HEALTH", imageSrc: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=500&fit=crop' },
-  { id: 3, title: 'SME Healthcare', description: 'Scalable group health solutions designed for small and medium enterprises with streamlined onboarding and flexible plan design.', tag: 'BUSINESS', imageSrc: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop' },
-  { id: 4, title: 'IPMI & Executive Care', description: 'International private medical insurance for executives and expatriates with global coverage networks and concierge services.', tag: 'EXECUTIVE & GLOBAL', imageSrc: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop' },
-  { id: 5, title: 'Freelancer & Individual', description: 'Digital-first individual health plans with instant issuance, flexible coverage options, and telehealth-centric care delivery.', tag: 'DIGITAL WORKFORCE', imageSrc: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop' },
-  { id: 6, title: 'API & Integration Layer', description: 'Full REST API access for product configuration, policy management, claims processing, and real-time event streaming.', tag: 'DEVELOPER', imageSrc: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop' },
+  { id: 1, title: 'SME Group Plans', description: 'Group cover for 3–200-person teams, via MERC\'s broker engine with instant quotes and digital issuance.', tag: 'BROKER-DISTRIBUTED', imageSrc: '/products/sme-group.svg' },
+  { id: 2, title: 'Essential Benefits Plan', description: 'DHA-mandated entry-tier cover — a high-volume compliance segment with streamlined onboarding.', tag: 'MANDATORY · HIGH-VOLUME', imageSrc: '/products/ebp.svg' },
+  { id: 3, title: 'Enhanced EBP', description: 'Richer benefits above the EBP floor — better experience and margin for the upwardly mobile segment.', tag: 'UPGRADED TIER', imageSrc: '/products/enhanced-ebp.svg' },
+  { id: 4, title: 'IPMI & Enterprise', description: 'Cross-border cover for multinationals and expat families across the GCC with concierge services.', tag: 'CROSS-BORDER', imageSrc: '/products/ipmi.svg' },
+  { id: 5, title: 'Individual & Retail', description: 'Standalone cover for freelancers and the self-employed — digital-first issuance and telehealth-centric care.', tag: 'GROWTH SEGMENT', imageSrc: '/products/individual.svg' },
+  { id: 6, title: 'API & Integration Layer', description: 'Full REST API for product configuration, policy management, claims processing, and real-time event streaming.', tag: 'DEVELOPER', imageSrc: '/products/api-platform.svg' },
 ]
 
 export function Portfolio() {
